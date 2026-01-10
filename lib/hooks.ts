@@ -10,6 +10,8 @@ export const useProducts = () => {
         const data = await productsApi.getProducts();
         return Array.isArray(data) ? data : [];
       } catch (e) {
+        console.log(e);
+        
         return [];
       }
     },
